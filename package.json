@@ -1,18 +1,20 @@
 {
   "name": "sisterwave",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "Jennifer Gonzalez",
+  "homepage": "http://sisterwave.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "lint": "ionic-app-scripts lint",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve",
-    "postinstall": "ionic-app-scripts build"
+    "ionic:serve": "ionic-app-scripts serve"
+
   },
   "dependencies": {
+    "@ionic/app-scripts": "3.1.5",    
+    "typescript": "2.4.2",
     "@angular/common": "5.0.3",
     "@angular/compiler": "5.0.3",
     "@angular/compiler-cli": "5.0.3",
@@ -36,8 +38,7 @@
     "zone.js": "0.8.18"
   },
   "devDependencies": {
-    "@ionic/app-scripts": "3.1.5",
-    "typescript": "2.4.2"
+
   },
   "description": "An Ionic project"
 }
