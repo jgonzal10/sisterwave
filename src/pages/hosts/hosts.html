@@ -1,0 +1,33 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <!--ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title-->
+    <ion-title>"HOST"</ion-title>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let host of currentHosts">
+      <button ion-item (click)="openHost(host)">
+        <ion-avatar item-start>
+          <img [src]="host.profilePic" />
+        </ion-avatar>
+        <h2>{{host.name}}</h2>
+        <p>{{host.about}}</p>
+        <ion-note item-end *ngIf="host.note">{{host.note}}</ion-note>
+      </button>
+
+      <ion-item-options>
+        <button ion-button color="danger" (click)="deleteHost(host)">
+          DELETE
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>
+

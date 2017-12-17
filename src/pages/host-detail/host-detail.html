@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ host.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="host-profile" text-center #profilePic [style.background-image]="'url(' + host.profilePic + ')'">
+  </div>
+
+  <div class="host-detail" padding>
+    <h2>{{host.name}}</h2>
+    <p>{{host.about}}</p>
+  </div>
+</ion-content>

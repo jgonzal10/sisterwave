@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Host } from '../../models/host';
+import { Hosts } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -11,30 +11,30 @@ import { Items } from '../../providers/providers';
 })
 export class SearchPage {
 
-  currentItems: any = [];
+  currentHosts: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public hosts: Hosts) { }
 
   /**
-   * Perform a service for the proper items.
+   * Perform a service for the proper Hosts.
    */
-  getItems(ev) {
+  getHosts(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
-      this.currentItems = [];
+      this.currentHosts = [];
       return;
     }
-    this.currentItems = this.items.query({
+    this.currentHosts = this.hosts.query({
       name: val
     });
   }
 
   /**
-   * Navigate to the detail page for this item.
+   * Navigate to the detail page for this host.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
+  openHosts(host: Host) {
+    this.navCtrl.push('HostDetailPage', {
+      host: host
     });
   }
 
