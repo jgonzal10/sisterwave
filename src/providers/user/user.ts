@@ -4,6 +4,8 @@ import { Injectable } from '@angular/core';
 
 import { Api } from '../api/api';
 
+
+
 /**
  * Most apps have the concept of a User. This is a simple provider
  * with stubs for login/signup/etc.
@@ -25,7 +27,9 @@ import { Api } from '../api/api';
  */
 @Injectable()
 export class User {
+  urlregister = 'http://localhost:51837/api/SisterWave/changePassword?userId=1&password=ytre';
   _user: any;
+  result: any;
 
   constructor(public api: Api) { }
 
@@ -35,7 +39,7 @@ export class User {
    */
   login(accountInfo: any) {
     let seq = this.api.post('login', accountInfo).share();
-
+    console.log(seq)
     seq.subscribe((res: any) => {
       // If the API returned a successful response, mark the user as logged in
       if (res.status == 'success') {
@@ -81,4 +85,11 @@ export class User {
   _loggedIn(resp) {
     this._user = resp.user;
   }
+
+
+    changePassword(){
+    console.log(this.urlregister)
+  //  return this.http.get(this.urlregister);
+  }
+
 }

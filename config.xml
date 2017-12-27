@@ -81,4 +81,10 @@
     <plugin name="cordova-plugin-device" spec="1.1.4" />
     <plugin name="cordova-plugin-splashscreen" spec="~4.0.1" />
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
+    <engine name="android" spec="~6.2.3" />
+    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
+        <variable name="APP_ID" value="170891000184601" />
+        <variable name="APP_NAME" value="sisterwave" />
+    </plugin>
+    <plugin name="cordova-plugin-nativestorage" spec="^2.2.2" />
 </widget>
